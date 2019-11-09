@@ -1,0 +1,58 @@
+@import '../mixins.scss';
+
+.wrap{
+    display: flex;
+    height: 100%;
+    align-items: center;
+    .container{
+        margin-right: 15px;
+    }
+}
+.view{
+    display: flex;
+    &_option{
+        width: 45px;
+        @include icons();
+        &.active{
+            background-color:#819099; 
+        }   
+    }
+}
+.upload{
+    display: flex;
+    &_buttons{
+        color: white;
+        background-color:#0696D7;
+        height: 40px;
+        &:hover{
+            background-color:#38ABDF;
+        }
+    }
+    &_send{
+        cursor: pointer;
+        padding:10px 30px;
+        border-radius: 4px 0 0 4px;
+        margin-right: 1px;  
+    }
+    &_expand{
+        border: none;
+        width: 30px;
+        border-radius: 0 4px 4px 0;
+    }
+    &_hidden-default{
+        @include hide-default-input();
+    }
+}
+.icons{
+    display: flex;
+    &_button{
+        @include icons();
+        width: 35px;
+    }
+    &_icon{
+        @include center();
+        width: 50%;
+    }
+}
+
+

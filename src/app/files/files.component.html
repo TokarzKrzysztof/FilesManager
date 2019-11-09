@@ -1,0 +1,22 @@
+<ul class='list' *ngIf='files.length'>
+    <li class='list_element' *ngFor='let file of files; let i = index'>
+        <label class='detail detail-btn checkbox' (change)='handleCheckbox($event, i)' for=`checkbox{{i}}`>
+            <span class='checkbox_btn'>
+                <span class="checkbox_icon fas fa-check"></span>
+            </span>
+            <input type="checkbox" id=`checkbox{{i}}` class='checkbox_input-default'>
+        </label>
+        <p class='detail'><span class="detail_icon fas fa-folder"></span> {{file.name}}</p>
+        <p class="detail">--</p>
+        <p class="detail">--</p>
+        <p class="detail">--</p>
+        <p class="detail">{{file.lastModifiedDate | date:"short"}}</p>
+        <p class="detail">--</p>
+        <p class="detail">--</p>
+        <p class="detail">--</p>
+        <p class="detail">--</p>
+        <p class="detail">--</p>
+        <p class="detail">--</p>
+        <p class="detail">{{i+1}}</p>
+    </li>
+</ul>

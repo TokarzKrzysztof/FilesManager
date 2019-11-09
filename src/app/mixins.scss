@@ -1,0 +1,88 @@
+@mixin icons{
+    position: relative;
+    height: 35px;
+    background-color: white;
+    border: 1px solid lightgrey;
+}
+@mixin center {
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+@mixin hide-default-input{
+    opacity: 0;
+    position: absolute;
+    z-index: -1;
+}
+@mixin details-position{
+    &:nth-child(1){
+        flex-basis: 2%;
+    }
+    &:nth-child(2){
+        flex-basis: 8%;
+    }
+    &:nth-child(3){
+        flex-basis: 10%;
+    }
+    &:nth-child(4){
+        flex-basis: 8%;
+    }
+    &:nth-child(5){
+        flex-basis: 5%;
+    }
+    &:nth-child(6){
+        flex-basis: 8%;
+    }
+    &:nth-child(7){
+        flex-basis: 10%;
+    }
+    &:nth-child(8){
+        flex-basis: 10%;
+    }
+    &:nth-child(9){
+        flex-basis: 10%;
+    }
+    &:nth-child(10){
+        flex-basis: 10%;
+    }
+    &:nth-child(11){
+        flex-basis: 10%;
+    }
+    &:nth-child(12){
+        flex-basis: 10%;
+    }
+    &:nth-child(13){
+        flex-basis: 10%;
+    }
+}
+@mixin checkbox-styles($top, $left){
+    .checkbox{
+        display: block;
+        position: relative;
+        &_btn{
+            cursor: pointer;
+            @include center();
+            border: 1px solid lightgrey;
+            width: 13px;
+            height: 13px;
+            background-color: transparent;
+            &.checked{
+                background-color: #0696D7;
+            }
+        }
+        &_icon{
+            position: absolute;
+            top:$top;
+            left: $left;
+            font-size: 8px;
+            color: white;
+        }
+        &_input-default{
+            @include hide-default-input();   
+        }
+        
+        
+    }
+}
+$view-option-border: 1px solid black;

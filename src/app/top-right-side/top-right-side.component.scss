@@ -1,0 +1,33 @@
+@import '../mixins.scss';
+
+.wrap{
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+.search{
+    position: relative;
+    &_placeholder{
+        position: absolute;
+        top:50%;
+        color: gray;
+        transform: translateY(-50%);
+    }
+    &_icon{
+        left: 10px;
+    }
+    &_txt{
+        left: 30px;
+    }
+    &_input{
+        height: 35px;
+        width: 300px;
+        border: none;
+    }
+}
+.icon-btn{
+    border: none;
+    width: 35px;
+    @include icons();
+    margin-left: 15px;
+}

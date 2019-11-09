@@ -1,0 +1,18 @@
+@import '../mixins.scss';
+.wrap{
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    height: 60px;
+    background-color: #F7F9FA;
+}
+.detail{
+    &-btn{
+        border: none;
+        background-color: transparent;
+        text-align: left;
+        padding: 0;
+    }
+    @include details-position();
+}
+@include checkbox-styles(1px,2px);

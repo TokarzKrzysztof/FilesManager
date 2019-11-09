@@ -1,0 +1,26 @@
+@import '../mixins.scss';
+.list{
+    list-style: none;
+    padding: 0;
+    background-color: white;
+    &_element{
+        display: flex;
+        height: 60px;
+        align-items: center;
+        font-size: 12px;
+        border-bottom: 1px solid lightgrey;
+    } 
+}
+.detail{
+    &-btn{
+        border: none;
+        background-color: transparent;
+        text-align: left;
+        padding: 0;
+    }
+    &_icon{
+        color: lightgrey;
+    }
+   @include details-position();
+}
+@include checkbox-styles(1px,1px);

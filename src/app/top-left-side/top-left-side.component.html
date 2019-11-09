@@ -1,0 +1,27 @@
+<div class="wrap">
+    <div class="container view">
+        <button class="view_option" (click)='changeView(firstView)' #firstView>
+        </button>
+        <button class="view_option active" (click)='changeView(secondView)' #secondView>
+        </button>
+    </div>
+    <div class="container upload">
+        <label class="upload_send upload_buttons" for="upload">Upload Files
+            <input class="upload_hidden-default" (change)="uploadFiles($event)" id="upload" type="file" mozdirectory
+                multiple></label>
+        <button class="upload_expand upload_buttons">
+            <span class="upload_icon fas fa-caret-down"></span>
+        </button>
+
+    </div>
+    <div class="container icons">
+        <button class="icons_button"><img class='icons_icon' src="../../assets/icons/share.png" alt=""></button>
+        <button class="icons_button"></button>
+        <button class="icons_button"></button>
+        <button class="icons_button"></button>
+    </div>
+    <div class="container amount-selected">
+        <p>{{amountSelected}} selected from {{amountAll}} items</p>
+    </div>
+
+</div>
